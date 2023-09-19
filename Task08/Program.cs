@@ -8,7 +8,7 @@ int count = 2;
 
 while (count <= N)
 {
-    if (count % 2 == 0)
-        Console.Write($"{count}, ");
+    if (count % 2 == 0)      // решение рабочее, но счётчик 11с. лишний,
+        Console.Write($"{count}, ");// т.к. count итак проходит только по чётным числам
     count += 2; 
 }

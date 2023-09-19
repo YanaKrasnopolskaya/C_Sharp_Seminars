@@ -9,12 +9,12 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 int max = number1;
 int min = number2;
 
-if (number1 > number2)
-{
-    max = number1; 
-    min = number2;
-}
-else
+if (number1 > number2)   // if (number2 > number1)
+{                        // {
+    max = number1;       //     max = number2;
+    min = number2;       //     min = number1;
+}                        // в таком случае блок else не нужен
+else                     // так как переменные уже объявлены
 {
     max = number2;
     min = number1;

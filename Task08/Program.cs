@@ -2,11 +2,11 @@
 //  а на выходе показывает все чётные числа от 1 до N.
 
 Console.Write("Введите число: ");
-int N = Convert.ToInt32(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
 int count = 2;
 
-while (count <= N)
+while (count <= n)
 {
     if (count % 2 == 0)      // решение рабочее, но счётчик 11с. лишний,
         Console.Write($"{count}, ");// т.к. count итак проходит только по чётным числам

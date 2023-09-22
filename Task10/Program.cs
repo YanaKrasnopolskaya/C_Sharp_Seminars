@@ -1,23 +1,48 @@
-﻿// 11. Напишите программу, которая выводит случайное
-// трёхзначное число и удаляет вторую цифру этого
-// числа.
-// 456 -> 46
-// 782 -> 72
-// 918 -> 98
+﻿// Задача 10: Напишите программу, которая принимает на вход 
+// трёхзначное число и на выходе показывает вторую цифру этого числа.
+// 456 -> 5
+// 782 -> 8
+// 918 -> 1
 
-int DeleteSecondDigit(int number)
+int GetUserInput(string message)
 {
-    int firstDigit = number / 100;
-    int thirdDigit = number % 10;
-    return firstDigit * 10 + thirdDigit;
+    Console.WriteLine(message);
+    int number = Convert.ToInt32(Console.ReadLine());
+    return number;
 }
 
-int numberToDigit = new Random().Next(100, 1000);
-Console.WriteLine($"Случайное число из отрезка от 100 до 999: {numberToDigit}");
+int SecondDigit(int number)
+{
+    int digit = number / 10 % 10;
+    return digit;
+}
 
-// int firstDigit = numberToDigit / 100;
-// int thirdDigit = numberToDigit % 10;
-// int result = firstDigit * 10 + thirdDigit;
+bool IsNumberValid(int number)
+{
+    if (number >= 100 && number < 1000) 
+    {
+        return true;
+    }    
+    else if (number > -1000 && number <= -100) 
+    {
+        return true;
+    }
+    else
+    {
+        Console.WriteLine("Вы ввели не трёхзначное число!");
+        return false;
+    }
+}
 
-int result = DeleteSecondDigit(numberToDigit);
-Console.WriteLine($"Итоговое число при удалении второго числа:  {result}");
+bool numValid = false;
+int num = 0;
+
+while (!numValid)
+{
+    num = GetUserInput("Введите трёхзначное число: ");
+    numValid = IsNumberValid(num);
+}
+
+int result = SecondDigit(num);
+Console.WriteLine($"Вторая цифра числа {num} --> {result}");
+

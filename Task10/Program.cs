@@ -6,7 +6,7 @@
 
 int GetUserInput(string message)
 {
-    Console.WriteLine(message);
+    Console.Write(message);
     int number = Convert.ToInt32(Console.ReadLine());
     return number;
 }
@@ -14,10 +14,12 @@ int GetUserInput(string message)
 int SecondDigit(int number)
 {
     int digit = number / 10 % 10;
+    Console.WriteLine($"Вторая цифра числа {number}: {digit}");
     return digit;
+
 }
 
-bool IsNumberValid(int number)
+bool CorrectInput(int number)
 {
     if (number >= 100 && number < 1000) 
     {
@@ -34,15 +36,23 @@ bool IsNumberValid(int number)
     }
 }
 
-bool numValid = false;
-int num = 0;
+// bool numValid = false;
+// int num = 0;
 
-while (!numValid)
+// while (!numValid)
+// {                                                        Этот пример позволяет выводить GetUserInput до тех пор,
+//     num = GetUserInput("Введите трёхзначное число: ");   пока не будет введено корректное число.
+//     numValid = IsNumberValid(num);
+// }
+
+int result = GetUserInput("Введите трёхзначное число: ");
+
+if (CorrectInput(result))
 {
-    num = GetUserInput("Введите трёхзначное число: ");
-    numValid = IsNumberValid(num);
+    SecondDigit(result);
 }
 
-int result = SecondDigit(num);
-Console.WriteLine($"Вторая цифра числа {num} --> {result}");
+
+
+    
 

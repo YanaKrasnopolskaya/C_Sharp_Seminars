@@ -4,7 +4,7 @@
 // [3, 7, 23, 12] -> 19
 // [-4, -6, 89, 6] -> 0
 
-int[] CreateArrayRndint(int size, int min, int max)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -39,7 +39,7 @@ int SumElementsAnOddPositions(int[] arr)
     return sum;
 }
 
-int[] array = CreateArrayRndint(8, 1, 100);
+int[] array = CreateArrayRndInt(8, 1, 100);
 PrintOut(array);
 Console.WriteLine();
 int sumElementsAnOddPositions = SumElementsAnOddPositions(array);

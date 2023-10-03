@@ -4,7 +4,7 @@
 //2. Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int[] CreateArrayRndint(int size, int min, int max)
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
@@ -39,7 +39,7 @@ int CountEvenNumbInArray(int[] arr)
     return count; 
 }
 
-int[] array = CreateArrayRndint(10, 100, 999);
+int[] array = CreateArrayRndInt(10, 100, 999);
 Console.Write("[");
 PrintOut(array);
 Console.Write("]");

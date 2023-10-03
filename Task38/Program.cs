@@ -56,8 +56,13 @@ double MinElementArray(double[] arr)
     return minElement;    
 }
 
-double DifferenceElementsArray(double maxElem, double minElem)
+double DifferenceElementsArray(double elem1, double elem2)
 {
+    double maxElem = elem1;
+    double minElem = elem2;
+    
+    if (elem2 > maxElem) maxElem = elem2;
+    
     double res = maxElem - minElem;
     
     return res;

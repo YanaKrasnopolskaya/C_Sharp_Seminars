@@ -61,7 +61,11 @@ double DifferenceElementsArray(double elem1, double elem2)
     double maxElem = elem1;
     double minElem = elem2;
     
-    if (elem2 > maxElem) maxElem = elem2;
+    if (elem2 > maxElem)
+    {
+        maxElem = elem2; 
+        minElem = elem1;
+    } 
     
     double res = maxElem - minElem;
     

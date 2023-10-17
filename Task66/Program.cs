@@ -49,7 +49,7 @@ public class Answer
         return sum;
     }
 
-    public static void Main()
+    public static void Main(string[] args)
     {
         int number1 = GetUserInput("Введите первое число: ");
         int number2 = GetUserInput("Введите второе натуральное число: ");

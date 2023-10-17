@@ -5,9 +5,13 @@
 // M = 4; N = 8. -> 30
 using System;
 
-
 public class Answer
 {
+    /// <summary>
+    /// Метод для пользовательского ввода
+    /// </summary>
+    /// <param name="message">сообщение пользователю</param>
+    /// <returns>целое число</returns>
     public static int GetUserInput(string message)
     {
         Console.Write(message);
@@ -15,6 +19,11 @@ public class Answer
         return num;
     }
 
+    /// <summary>
+    /// Метод проверки числа на натуральность
+    /// </summary>
+    /// <param name="num">число</param>
+    /// <returns>true || false</returns>
     public static bool NatularsCheck(int num)
     {
         if (num < 1) return false;
@@ -22,6 +31,12 @@ public class Answer
         else return true;
     }
 
+    /// <summary>
+    /// Метод подсчёта суммы натуральных чисел от M до N
+    /// </summary>
+    /// <param name="num1">первое натуральное число</param>
+    /// <param name="num2">второе натуральное</param>
+    /// <returns>сумма</returns>
     public static int SumNaturalsElements(int num1, int num2)
     {
         int sum = 0;
